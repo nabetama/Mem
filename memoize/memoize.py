@@ -15,3 +15,9 @@ class Mem(object):
             f.cache[f.__name__] = result
             return result
         return _cache
+
+    @staticmethod
+    def has_memo(f):
+        if '_cache' in f.__name__:
+            return True
+        return False
